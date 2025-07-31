@@ -12,7 +12,7 @@
 		AA1234567890ABD1 /* FoodModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1234567890ABD2 /* FoodModels.swift */; };
 		AA1234567890ABD3 /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1234567890ABD4 /* AddFoodView.swift */; };
 		AA1234567890ABD5 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1234567890ABD6 /* HistoryView.swift */; };
-		AA1234567890ABD7 /* FoodDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1234567890ABD8 /* FoodDatabase.swift */; };
+		AA1234567890ABD7 /* NutritionSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1234567890ABD8 /* NutritionSummaryView.swift */; };
 		AA1234567890ABD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1234567890ABDA /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +23,7 @@
 		AA1234567890ABD2 /* FoodModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModels.swift; sourceTree = "<group>"; };
 		AA1234567890ABD4 /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
 		AA1234567890ABD6 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		AA1234567890ABD8 /* FoodDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDatabase.swift; sourceTree = "<group>"; };
+		AA1234567890ABD8 /* NutritionSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionSummaryView.swift; sourceTree = "<group>"; };
 		AA1234567890ABDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA1234567890ABDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +62,6 @@
 				AA1234567890ABD0 /* ContentView.swift */,
 				AA1234567890ABDD /* Views */,
 				AA1234567890ABDE /* Models */,
-				AA1234567890ABDF /* Data */,
 				AA1234567890ABDA /* Assets.xcassets */,
 				AA1234567890ABDC /* Info.plist */,
 			);
@@ -74,6 +73,7 @@
 			children = (
 				AA1234567890ABD4 /* AddFoodView.swift */,
 				AA1234567890ABD6 /* HistoryView.swift */,
+				AA1234567890ABD8 /* NutritionSummaryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -84,14 +84,6 @@
 				AA1234567890ABD2 /* FoodModels.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		AA1234567890ABDF /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				AA1234567890ABD8 /* FoodDatabase.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +160,7 @@
 				AA1234567890ABD1 /* FoodModels.swift in Sources */,
 				AA1234567890ABD3 /* AddFoodView.swift in Sources */,
 				AA1234567890ABD5 /* HistoryView.swift in Sources */,
-				AA1234567890ABD7 /* FoodDatabase.swift in Sources */,
+				AA1234567890ABD7 /* NutritionSummaryView.swift in Sources */,
 				AA1234567890ABCD /* FoodTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

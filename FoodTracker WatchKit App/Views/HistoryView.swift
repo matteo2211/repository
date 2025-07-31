@@ -120,36 +120,45 @@ struct HistoryFoodRow: View {
     let entry: FoodEntry
     
     var body: some View {
-        HStack {
-            Text(entry.food.category.icon)
-                .font(.title3)
-            
-            VStack(alignment: .leading, spacing: 2) {
-                Text(entry.food.name)
-                    .font(.caption)
-                    .fontWeight(.medium)
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Text(entry.food.categoryEnum.icon)
+                    .font(.title3)
                 
-                HStack {
-                    Text("\(Int(entry.quantity))g")
-                        .font(.caption2)
-                        .foregroundColor(.secondary)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(entry.food.nome)
+                        .font(.caption)
+                        .fontWeight(.medium)
                     
-                    Text("•")
-                        .font(.caption2)
-                        .foregroundColor(.secondary)
-                    
-                    Text(timeString(from: entry.timestamp))
-                        .font(.caption2)
-                        .foregroundColor(.secondary)
+                    HStack {
+                        Text("\(Int(entry.quantity))g")
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
+                        
+                        Text("•")
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
+                        
+                        Text(timeString(from: entry.timestamp))
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
+                    }
                 }
+                
+                Spacer()
+                
+                Text("\(entry.calories) kcal")
+                    .font(.caption2)
+                    .fontWeight(.medium)
+                    .foregroundColor(.blue)
             }
             
-            Spacer()
-            
-            Text("\(entry.calories) kcal")
-                .font(.caption2)
-                .fontWeight(.medium)
-                .foregroundColor(.blue)
+            // Macronutrients
+            HStack(spacing: 8) {
+                MacroChip(label: "P", value: entry.proteine, color: .blue)
+                MacroChip(label: "G", value: entry.grassi, color: .orange)
+                MacroChip(label: "C", value: entry.carboidrati, color: .green)
+            }
         }
         .padding(.vertical, 4)
     }
@@ -158,6 +167,29 @@ struct HistoryFoodRow: View {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
         return formatter.string(from: date)
+    }
+}
+
+struct MacroChip: View {
+    let label: String
+    let value: Double
+    let color: Color
+    
+    var body: some View {
+        HStack(spacing: 2) {
+            Text(label)
+                .font(.caption2)
+                .fontWeight(.bold)
+                .foregroundColor(color)
+            
+            Text("\(value, specifier: "%.1f")")
+                .font(.caption2)
+                .foregroundColor(.secondary)
+        }
+        .padding(.horizontal, 4)
+        .padding(.vertical, 2)
+        .background(color.opacity(0.1))
+        .cornerRadius(4)
     }
 }
 

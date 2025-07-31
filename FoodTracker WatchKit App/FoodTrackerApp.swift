@@ -14,6 +14,12 @@ struct FoodTrackerApp: App {
                         Text("Home")
                     }
                 
+                NutritionSummaryView(foodTracker: foodTracker)
+                    .tabItem {
+                        Image(systemName: "chart.pie.fill")
+                        Text("Nutrizione")
+                    }
+                
                 HistoryView(foodTracker: foodTracker)
                     .tabItem {
                         Image(systemName: "chart.bar.fill")
